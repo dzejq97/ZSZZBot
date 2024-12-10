@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import CClient from './classes/CClient';
-import { GatewayIntentBits, IntentsBitField } from 'discord.js';
+import { GatewayIntentBits } from 'discord.js';
 dotenv.config();
 
 const client = new CClient({
