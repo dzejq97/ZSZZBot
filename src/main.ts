@@ -16,7 +16,8 @@ const client = new CClient({
 })
 
 const main = async () => {
-    //client.login(process.env.TOKEN);
     client.setupEventsHandler();
+    await client.setupSlashCommands();
+    client.login(process.env.TOKEN);
 }
 main();
