@@ -5,7 +5,9 @@ Made with ❤️ using TypeScript. Powered by discord.js
 
 ### Development set up guide
 
-`npm install`
+Rename `sample.env` into `.env` and insert bot token
+
+Run `npm install` to install all dependencies
 
 > Option 1: Live preview and hot reload
 >
@@ -23,3 +25,7 @@ Made with ❤️ using TypeScript. Powered by discord.js
 >
 > `npm run build`
 > `npm run dev`
+
+### Runtime set up guide
+
+WIP
