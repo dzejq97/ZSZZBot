@@ -1,0 +1,23 @@
+{
+  "name": "discord-bot",
+  "version": "0.0.0",
+  "main": "./build/main.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "nodemon dist/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@types/node": "^22.10.1",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.7"
+  }
+}
