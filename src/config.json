@@ -1,0 +1,15 @@
+{
+    "dev_mode": true,
+    "main_guild": {
+        "id": "1312466709726236703",
+        "channels_ids": {
+            "general": "1312466710477144268"
+        }
+    },
+    "development_guild": {
+        "id": "1315942414606929952",
+        "channels_ids": {
+            "general": "1315942414606929955"
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import { Collection, REST, RESTPostAPIChatInputApplicationCommandsJSONBody, Routes } from "discord.js";
 import ICommand from "../interfaces/ICommand";
+import config from "../config.json";
 
 export default async function(commands: Collection<string, ICommand>) {
     const commandsJSON: RESTPostAPIChatInputApplicationCommandsJSONBody[] = [];
@@ -21,7 +22,7 @@ export default async function(commands: Collection<string, ICommand>) {
             { body: commandsJSON }
         )
         await rest.put(
-            Routes.applicationGuildCommands(process.env.CLIENT_ID!, process.env.DEV_GUILD_ID!),
+            Routes.applicationGuildCommands(process.env.CLIENT_ID!, config.development_guild.id),
             { body: devOnlyCommandsJSON}
         )
     } catch(e) {

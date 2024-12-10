@@ -6,9 +6,12 @@ import on_ready from "../events/on_ready";
 import ICommand from "../interfaces/ICommand";
 import on_interaction_create from "../events/on_interaction_create";
 import register_commands from "../etc/register_commands";
+import on_guild_member_add from "../events/on_guild_member_add";
+import config from "../config.json";
 
 export default class CClient extends Client {
-    commands = new Collection<string, ICommand>()
+    commands = new Collection<string, ICommand>();
+    config = config;
 
     constructor(options: ClientOptions) {
         super(options);
@@ -17,7 +20,7 @@ export default class CClient extends Client {
     setupEventsHandler() {
         this.on('ready', async () => await on_ready(this));
         this.on('interactionCreate', async (interaction) => await on_interaction_create(this, interaction));
-
+        this.on('guildMemberAdd', async (member) => await on_guild_member_add(this, member));
         console.log('Events ready');
     }
 
