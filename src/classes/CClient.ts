@@ -40,7 +40,9 @@ export default class CClient extends Client {
             }
         }
 
-        await register_commands(this.commands);
+        if (this.config.reload_commands) {
+            await register_commands(this.commands);
+        }
         console.log('commands ready')
     }
 }
